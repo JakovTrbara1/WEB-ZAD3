@@ -1,0 +1,96 @@
+:root {
+    --animacija: #9b59b6;      /* Animacija (5.3%) */
+    --drama: #3498db;          /* Drama (26.3%) */
+    --romantični: #f1c40f;     /* Romantični (5.3%) */
+    --komedija: #ff851b;       /* Komedija (26.3%) */
+    --krimić: #7f8c8d;         /* Krimić (5.3%) */
+    --triler: #00cec9;         /* Triler (5.3%) */
+    --avantura: #6c5ce7;       /* Avantura (5.3%) */
+    --dokumentarni: #1abc9c;   /* Dokumentarni (5.3%) */
+    --horor: #e74c3c;          /* Horor (5.3%) */
+    --akcija: #2ecc71;         /* Akcija (10.5%) */
+  }
+  
+  /* Ostatak općih stilova u style.css */
+  
+  h1, h2, h3 {
+    margin-top: 1.5rem;
+  }
+  
+  /* Pie chart s animacijom rotacije */
+  .pie-chart {
+    margin: 2rem auto;
+    width: 100%;
+    max-width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: conic-gradient(
+      var(--animacija) 0% 5.3%,
+      var(--romantični) 5.3% 10.6%,
+      var(--krimić) 10.6% 15.9%,
+      var(--triler) 15.9% 21.2%,
+      var(--avantura) 21.2% 26.5%,
+      var(--dokumentarni) 26.5% 31.8%,
+      var(--horor) 31.8% 37.1%,
+      var(--akcija) 37.1% 47.6%,
+      var(--drama) 47.6% 73.9%,
+      var(--komedija) 73.9% 100%
+    );
+    animation: rotateIn 1.8s ease-in-out;
+  }
+  
+  @keyframes rotateIn {
+    from {
+      transform: rotate(-180deg);
+      opacity: 0;
+    }
+    to {
+      transform: rotate(0deg);
+      opacity: 1;
+    }
+  }
+  
+  /* LEGEND semantički - definition list */
+  .legend {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+    margin: 0 auto 2rem;
+    padding: 0 1rem;
+  }
+  
+  .legend dt {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+  }
+  .legend dt:hover {
+    transform: scale(1.2);
+  }
+  
+  .legend dd {
+    margin: 0;
+    text-align: left;
+    transition: color 0.3s ease;
+  }
+  .legend dd:hover {
+    color: #333;
+    font-weight: bold;
+  }
+  
+  /* Responsive */
+  @media (max-width: 500px) {
+    .pie-chart {
+      max-width: 180px;
+      height: 180px;
+    }
+    .legend {
+      font-size: 0.9rem;
+      gap: 8px 15px;
+    }
+  }
+  

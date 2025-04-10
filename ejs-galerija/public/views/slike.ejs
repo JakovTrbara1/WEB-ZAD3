@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <title>Galerija</title>
+  <link rel="stylesheet" href="style/style_slike.css">
+  <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+  <section class="galerija">
+    <h1>Galerija slika</h1>
+    <% images.forEach(image => { %>
+      <figure class="galerija_slika">
+        <a href="#<%= image.id %>">
+          <img src="<%= image.url %>" alt="<%= image.title %>">
+        </a>
+        <figcaption><%= image.title %></figcaption>
+      </figure>
+    <% }) %>
+  </section>
+
+  <% images.forEach(image => { %>
+    <div class="lightbox" id="<%= image.id %>">
+      <figure>
+        <img src="<%= image.url %>" alt="<%= image.title %>">
+        <figcaption><%= image.title %></figcaption>
+      </figure>
+      <a href="#" class="close-btn">×</a>
+    </div>
+  <% }) %>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- SEO meta tagovi -->
+  <meta name="description" content="Grafički prikaz podataka o žanrovima filmova - pie chart.">
+  <meta name="author" content="Jakov Trbara" />
+  <meta name="keywords" content="filmovi, HTML, CSS, web programiranje, grafikon">
+  
+  <!-- Glavni stilovi (isti kao na početnoj) -->
+  <link rel="stylesheet" href="style/style.css" />
+  <!-- Specifični stilovi za grafikon (pie chart) -->
+  <link rel="stylesheet" href="style/grafikon.css" />
+  
+  <title>FILMOVI.net - Grafikon Žanrova</title>
+</head>
+<body>
+  <!-- Zaglavlje stranice -->
+  <header>
+    <h1>Dobrodošli na FILMOVI.net</h1>
+  </header>
+  
+  <!-- Navigacija s ARIA obilježjima (ista kao na početnoj) -->
+  <nav role="navigation" aria-labelledby="primarna-navigacija">
+    <!-- Skriveni naslov za čitače zaslona -->
+    <h2 id="primarna-navigacija" class="visually-hidden">Primarna navigacija</h2>
+    <ul class="nav-menu">
+      <li><a href="index.html" aria-label="Početna stranica">Početna</a></li>
+      <li><a href="grafikon.html" aria-label="Grafikon žanrova filmova">Grafikon</a></li>
+      <li><a href="slike.html" aria-label="Galerija slika">Slike</a></li>
+      <li><a href="#" aria-label="Kontakt">Kontakt</a></li>
+    </ul>
+  </nav>
+  
+  <!-- Glavni sadržaj -->
+  <main>
+    <!-- Sekcija s pie chartom i legendom -->
+    <section class="charts-section" aria-label="Vizualizacija žanrova filmova">
+      <h2>Vizualizacija filmskih žanrova</h2>
+      
+      <!-- Pie chart s animiranim conic-gradient i legendom u <dl> -->
+      <figure class="pie-chart" aria-label="Pie chart žanrova filmova"></figure>
+      
+      <h3>Legenda žanrova</h3>
+      <dl class="legend">
+        <dt style="background-color: #9b59b6;"></dt>
+        <dd>Animacija (1, 5.3%)</dd>
+
+        <dt style="background-color: #3498db;"></dt>
+        <dd>Drama (5, 26.3%)</dd>
+
+        <dt style="background-color: #f1c40f;"></dt>
+        <dd>Romantični (1, 5.3%)</dd>
+
+        <dt style="background-color: #ff851b;"></dt>
+        <dd>Komedija (5, 26.3%)</dd>
+
+        <dt style="background-color: #7f8c8d;"></dt>
+        <dd>Krimić (1, 5.3%)</dd>
+
+        <dt style="background-color: #00cec9;"></dt>
+        <dd>Triler (1, 5.3%)</dd>
+
+        <dt style="background-color: #6c5ce7;"></dt>
+        <dd>Avantura (1, 5.3%)</dd>
+
+        <dt style="background-color: #1abc9c;"></dt>
+        <dd>Dokumentarni (1, 5.3%)</dd>
+
+        <dt style="background-color: #e74c3c;"></dt>
+        <dd>Horor (1, 5.3%)</dd>
+
+        <dt style="background-color: #2ecc71;"></dt>
+        <dd>Akcija (2, 10.5%)</dd>
+      </dl>
+    </section>
+  </main>
+  
+  <!-- Podnožje stranice -->
+  <footer>
+    <p>&copy; 2025. Web Programiranje. Sva prava pridržana.</p>
+  </footer>
+</body>
+</html>
